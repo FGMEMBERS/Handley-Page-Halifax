@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+    <object-name>inttourvitres</object-name>
+    <object-name>intsousnez</object-name>
+    <object-name>inttourelleavant</object-name>
+    <object-name>inttourellecentre</object-name>
+    <object-name>inttourellearriere</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Handley-Page-Halifax/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -6.887 </x-m>
+      <y-m> -0.354 </y-m>
+      <z-m>  0.922 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Planche de bord -->
+  <model>
+    <path>Aircraft/Handley-Page-Halifax//Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -7.576 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.699 </z-m>
+      <roll-deg>     0 </roll-deg>
+      <pitch-deg>    0 </pitch-deg>
+      <heading-deg>  0 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
+

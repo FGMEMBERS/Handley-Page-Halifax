@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+************************************************************************
+Short halifax
+
+September 2010 BARANGER Emmanuel
+************************************************************************
+-->
+
+<PropertyList include="halifax-base.xml">
+
+  <sim>
+
+    <description>Handley Page halifax (YASim)</description>
+    <flight-model>yasim</flight-model>
+    <aero>halifax-yasim</aero>
+
+  </sim>
+  
+</PropertyList>
+
