@@ -4,8 +4,17 @@
 <PropertyList include="halifax-yasim-cnf.xml">
 
   <sim>
+    
     <description>Handley Page halifax</description>
-    <author>BARANGER Emmanuel</author>
+    <author>BARANGER Emmanuel, StuartC</author>
+    
+    <rating>
+      <FDM type="int">     2 </FDM>
+      <systems type="int"> 1 </systems>
+      <cockpit type="int"> 1 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
   </sim>
 
 </PropertyList>
