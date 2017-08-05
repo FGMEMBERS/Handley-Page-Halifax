@@ -13,22 +13,46 @@
     <object-name>inttourelleavant</object-name>
     <object-name>inttourellecentre</object-name>
     <object-name>inttourellearriere</object-name>
+	   <object-name>intvitres</object-name>
+  </animation>
 
     <!-- Objets transparents -->
-    <object-name>intvitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>intvitres</object-name>
-  </animation>
-
-  <animation>
+	
+	<animation>
     <type>shader</type>
     <shader>chrome</shader>
     <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>intvitres</object-name>
+     <object-name>intvitres</object-name>
+
   </animation>
+  
+  
+  <effect>
+      <inherits-from>Effects/model-transparent</inherits-from>
+      <object-name>intvitres</object-name>
+   </effect>
+  
+
+  
+  
+   <!-- parts invisible from internally 
+
+    <animation>
+        <type>select</type>
+         <object-name>CanopyGlas1</object-name>
+ <object-name>intvitres</object-name>
+		<condition>
+<not>
+            <property>sim/current-view/internal</property>
+</not>
+        </condition>
+    </animation>	
+	-->
+	
+	
+	
+	
+
 
   <!-- Pilote -->
   <model>

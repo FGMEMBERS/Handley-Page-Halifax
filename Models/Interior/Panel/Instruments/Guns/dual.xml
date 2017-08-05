@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ 
+
+  <!-- Main M2 Brwoning 0.50 cal  --> 
+  <model>
+    <path>Aircraft/Handley-Page-Halifax/Models/Interior/Guns/M2_Browning.xml</path>
+    <offsets>
+      <x-m> -7.600 </x-m>
+      <y-m> -0.000 </y-m>
+      <z-m> -0.010 </z-m>
+      <pitch-deg> -5 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Handley-Page-Halifax/Models/Interior/Guns/Mark_6_Adapter.xml</path>
+    <offsets>
+      <x-m> -7.600 </x-m>
+      <y-m> -0.000 </y-m>
+      <z-m>  0.000 </z-m>
+      <pitch-deg> -5 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Handley-Page-Halifax/Models/Interior/Guns/M2_AmmunitionBelt.xml</path>
+    <offsets>
+      <x-m> -7.300 </x-m>
+      <y-m>  0.075 </y-m>
+      <z-m>  0.030 </z-m>
+      <pitch-deg> -5 </pitch-deg>
+    </offsets>
+  </model>
+
+
+
+</PropertyList>
+

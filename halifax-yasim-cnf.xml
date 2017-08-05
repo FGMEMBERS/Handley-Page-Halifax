@@ -8,21 +8,6 @@
     <flight-model>yasim</flight-model>
     <aero>halifax-yasim</aero>
 
-    <tags>
-      <tag>handley page halifax (yasim)</tag>
-      <tag>handley page</tag>
-      <tag>high-wing</tag>
-      <tag>tail-dragger</tag>
-      <tag>h-tail</tag>
-     <tag>bomber</tag>
-      <tag>retractable-gear</tag>
-      <tag>four-engine</tag>
-      <tag>piston</tag>
-      <tag>propeller</tag>
-     <tag>1940s</tag>
-     <tag>ww2</tag>
-   </tags>
-
   </sim>
   
 </PropertyList>

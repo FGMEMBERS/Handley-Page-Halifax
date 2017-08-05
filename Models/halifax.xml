@@ -1,8 +1,14 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
   <path>halifax.ac</path>
+  
+  <!-- MP sound call -->
+	
+	<sound>
+		<path>Aircraft/Handley-Page-Halifax/Sounds/mp-sound.xml</path>
+	</sound>
 
   <nasal>
     <load>
@@ -158,43 +164,37 @@
 -->
   </animation>
 
-  <effect>
-    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
-    <object-name>fuselage</object-name>
-    <object-name>ailes</object-name>
-    <object-name>aileronG</object-name>
-    <object-name>aileronD</object-name>
-    <object-name>voletG1</object-name>
-    <object-name>voletG2</object-name>
-    <object-name>voletD1</object-name>
-    <object-name>voletD2</object-name>
-    <object-name>porteGI</object-name>
-    <object-name>porteGE</object-name>
-    <object-name>porteDI</object-name>
-    <object-name>porteDE</object-name>
-    <object-name>ailes2</object-name>
-    <object-name>derive</object-name>
-    <object-name>directionG</object-name>
-    <object-name>directionD</object-name>
-    <object-name>profondeur</object-name>
-    <object-name>moteursE</object-name>
-    <object-name>moteursI</object-name>
-    <object-name>bolGE</object-name>
-    <object-name>bolGI</object-name>
-    <object-name>bolDI</object-name>
-    <object-name>bolDE</object-name>
-    <object-name>antennes</object-name>
-    <object-name>tourelleavant</object-name>
-    <object-name>tourelletoit</object-name>
-    <object-name>tourellearriere</object-name>
-  </effect>
-
-  <animation>
+ <animation>
     <type>shader</type>
     <shader>chrome</shader>
     <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>vitres</object-name>
+
   </animation>
+  
+  
+  <effect>
+      <inherits-from>Effects/model-transparent</inherits-from>
+     <object-name>vitres</object-name>
+   </effect>
+  
+
+  
+  
+   <!-- parts invisible from internally -->
+
+    <animation>
+        <type>select</type>
+         <object-name>CanopyGlas1</object-name>
+<object-name>vitres</object-name>
+		<condition>
+<not>
+            <property>sim/current-view/internal</property>
+</not>
+        </condition>
+    </animation>	
+
+  
 
   <animation>
     <type>noshadow</type>
@@ -210,7 +210,7 @@
     <object-name>propdiscGE</object-name>
   </animation>
 
-  <!-- Une ombre pour OSG en attendant Rembrandt -->
+  <!-- Une ombre pour OSG en attendant Rembrandt 
   <model>
     <path>Aircraft/Handley-Page-Halifax/Models/shadow.xml</path>
     <offsets>
@@ -218,9 +218,9 @@
       <y-m>  0.000 </y-m>
       <z-m> -2.500 </z-m>
     </offsets>
-  </model>
+  </model>-->
 
-  <!-- Intérieur -->
+  <!-- Interior -->
   <model>
     <path>Aircraft/Handley-Page-Halifax/Models/Interior/interior.xml</path>
   </model>
@@ -409,7 +409,7 @@
     </offsets>
   </model>
 
-  <!-- Les hélices --> 
+  <!-- Les props --> 
   <animation>
     <name>HeliceCompleteGE</name>
     <object-name>propdiscGE</object-name>
@@ -418,7 +418,7 @@
     <object-name>bolGE</object-name>
   </animation>
 
-  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <!--  de l'objet visible en fonction des rpm -->
   <animation>
     <type>select</type>
     <object-name>propdiscGE</object-name>
@@ -483,7 +483,7 @@
     <object-name>bolGI</object-name>
   </animation>
 
-  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <!-- de l'objet visible en fonction des rpm -->
   <animation>
     <type>select</type>
     <object-name>propdiscGI</object-name>
@@ -548,7 +548,7 @@
     <object-name>bolDI</object-name>
   </animation>
 
-  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <!--  de l'objet visible en fonction des rpm -->
   <animation>
     <type>select</type>
     <object-name>propdiscDI</object-name>
@@ -613,7 +613,7 @@
     <object-name>bolDE</object-name>
   </animation>
 
-  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <!--  de l'objet visible en fonction des rpm -->
   <animation>
     <type>select</type>
     <object-name>propdiscDE</object-name>
@@ -815,7 +815,7 @@
     </axis>
   </animation>
 
-  <!-- Rentré des roues -->
+  <!-- des roues -->
   <animation>
     <name>TrainGauche</name>
     <object-name>roueG</object-name>
@@ -1080,6 +1080,47 @@
       <z>  0 </z>
     </axis>
   </animation>
+  
+  
+  <!-- GUN POSITIONS -->
+  
+  <!-- Nose guns - quad mount -->
+  
+  <model>
+    <path>Aircraft/Handley-Page-Halifax/Models/Interior/Guns/quad.xml</path>
+    <offsets>
+      <x-m> -10.35 </x-m>
+      <y-m> -0.000 </y-m>
+      <z-m> 0.250 </z-m>
+      <pitch-deg> 0 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- Rear gun, quad mount -->
+  <model>
+    <path>Aircraft/Handley-Page-Halifax/Models/Interior/Guns/quad.xml</path>
+    <offsets>
+      <x-m> 10.6 </x-m>
+      <y-m> -0.000 </y-m>
+      <z-m> 0.950 </z-m>
+      <pitch-deg> 0 </pitch-deg>
+	  <heading-deg>180 </heading-deg>
+    </offsets>
+  </model>
+  
+  
+  <!-- Top gun, dual mount -->
+  <model>
+    <path>Aircraft/Handley-Page-Halifax/Models/Interior/Guns/dual.xml</path>
+    <offsets>
+      <x-m> 1.46 </x-m>
+      <y-m> -0.000 </y-m>
+      <z-m> 1.80 </z-m>
+      <pitch-deg> 0 </pitch-deg>
+	  <heading-deg>180 </heading-deg>
+    </offsets>
+  </model>
+  
 
 </PropertyList>
 

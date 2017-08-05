@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<!--
+  MD500 multiplayer passenger view.
+
+  Copyright (C) 2009  Anders Gidenstam  (anders(at)gidenstam.org)
+  This file is licensed under the GPL license version 2 or later.
+-->
+<!--
+  Usage: fgfs - -prop:/sim/remote/pilot-callsign="remote pilot callsign" - -aircraft=Fi-156-passenger
+-->
+<PropertyList>
+
+  <sim include="Nasal/viewsg.xml">
+
+  <description>Halifax MP Gunners(YASIM)</description>
+  <author>Mathias Froehlich, Algernon</author>
+  <status>vAlpha 0.9</status>
+  <aircraft-version>$Id$</aircraft-version>
+  
+  <flight-model>null</flight-model>
+
+  <presets>
+   <onground type="bool">false</onground>
+   <altitude-agl-ft type="double">30.0</altitude-agl-ft>
+  </presets>
+
+  <!-- 3d model -->
+  <model>
+    <path>Aircraft/Handley-Page-Halifax/Models/Halifax-gunner.xml</path>
+  </model>
+
+ 
+
+   <sound>
+      <path>Aircraft/Handley-Page-Halifax/Sounds/halifax-sound.xml</path>
+    </sound>
+		
+
+		
+
+ 
+
+  <menubar>
+   <default>
+    <menu n="100">
+     <label>Halifax</label>
+     <item>
+      <label>Select Pilot</label>
+      <binding>
+       <command>nasal</command>
+       <script>
+        dual_control_tools.
+          copilot_dialog.show(aircraft_dual_control.pilot_type);
+       </script>
+      </binding>
+     </item>
+    </menu>
+   </default>
+  </menubar>
+
+ </sim>
+ 
+ 
+
+ <nasal>
+ 
+
+  <dual_control_tools>
+   <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+  </dual_control_tools>
+  <aircraft_dual_control>
+   <file>Aircraft/Handley-Page-Halifax/Nasal/halifax-dual-control.nas</file>
+  </aircraft_dual_control>
+  <dual_control>
+   <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
+  </dual_control>
+  
+ </nasal>
+
+</PropertyList>

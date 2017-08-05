@@ -5,10 +5,10 @@
   <sim include="Nasal/views.xml">
  
     <author>BARANGER Emmanuel (3D), StuartC</author>
-    <aircraft-version>0.2</aircraft-version>
+    <aircraft-version>0.6a</aircraft-version>
     <status>Alpha</status>
    
-    <fuel-fraction>0.8</fuel-fraction>
+    <fuel-fraction>1</fuel-fraction>
   
     <startup>
       <splash-texture>Aircraft/Handley-Page-Halifax/halifax-splash.png</splash-texture>
